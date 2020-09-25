@@ -18,6 +18,7 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(", restapiview.home, name='home"),
-    path('restapi/task/string', restapiview.taskstring, name='restapi_task_string'),
+    path('', restapiview.home, name='home'),
+    path('restapi/task/string', restapiview.taskstring, name='restapi_task_stinrg'),
 ]
+
