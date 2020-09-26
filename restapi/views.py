@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 from django.urls import include, path
+from .models import City
+import requests
 from .forms import CityForm
 
 # Create your views here.
