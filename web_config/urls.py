@@ -14,11 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+#from restapi import views
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', restapiview.home, name='home'),
-    path('restapi/task/string', restapiview.taskstring, name='restapi_task_stinrg'),
+    path('', include('restapi.urls')),
+    # path('restapi/', include('restapi.urls')),
+    # path('restapi/', restapiview, name='index'),
+    # path('restapi/task/string', restapiview.taskstring, name='restapi_task_string'),
 ]
-
